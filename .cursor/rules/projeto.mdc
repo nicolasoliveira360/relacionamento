@@ -1,0 +1,223 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+{
+  "project": {
+    "framework": "React",
+    "typescript": true,
+    "styling": "TailwindCSS",
+    "components": "Shadcn UI",
+    "animation": "Framer Motion",
+    "icons": "Lucide"
+  },
+  "theme": {
+    "colors": {
+      "primary": "#FF6F91",
+      "secondary": "#A084CA",
+      "neutralWhite": "#FFFFFF",
+      "neutralLight": "#F5F5F5",
+      "cta": "#FF9671"
+    },
+    "typography": {
+      "headingFont": "Playfair Display",
+      "bodyFont": "Poppins",
+      "headingStyles": {
+        "weight": "bold",
+        "italic": true
+      },
+      "bodyStyles": {
+        "weight": "regular"
+      },
+      "buttonFont": {
+        "family": "Poppins",
+        "weight": "bold",
+        "uppercase": true
+      }
+    },
+    "spacing": {
+      "sectionPadding": "py-16 px-8",
+      "gridGap": "gap-8"
+    },
+    "effects": {
+      "buttonHover": "scale-105 shadow-lg transition",
+      "cardShadow": "shadow-md rounded-2xl",
+      "hoverAnimation": "motion.div whileHover={{ scale: 1.02 }}"
+    }
+  },
+  "layout": [
+    {
+      "section": "Hero",
+      "background": "bg-gradient-to-r from-primary to-secondary",
+      "elements": [
+        {
+          "type": "Heading",
+          "content": "Surpreenda quem você ama com Pequenos Gestos Diários (E Gaste Menos Que Um Café!)",
+          "size": "text-4xl md:text-5xl",
+          "color": "text-white",
+          "animation": "fade-up"
+        },
+        {
+          "type": "Subheading",
+          "content": "Planner + Mensagens + Ideias prontas para você transformar qualquer dia comum em algo inesquecível. Por apenas R$9,90.",
+          "size": "text-lg md:text-xl",
+          "color": "text-white/90"
+        },
+        {
+          "type": "Image",
+          "src": "mockup-planner.png",
+          "style": "max-w-md mx-auto"
+        },
+        {
+          "type": "Button",
+          "content": "🔥 Quero Começar a Surpreender Agora!",
+          "color": "bg-cta text-white",
+          "style": "py-4 px-8 rounded-2xl shadow-lg",
+          "hover": "buttonHover"
+        },
+        {
+          "type": "GuaranteeText",
+          "content": "✅ Compra 100% segura | Acesso imediato | 7 dias de garantia",
+          "size": "text-sm text-white/80 mt-4"
+        }
+      ]
+    },
+    {
+      "section": "Problema",
+      "background": "bg-neutralWhite",
+      "elements": [
+        {
+          "type": "Heading",
+          "content": "Você sente que, com a rotina, seu relacionamento está ficando sem aquele brilho de antes?",
+          "size": "text-3xl text-center"
+        },
+        {
+          "type": "Bullets",
+          "items": [
+            "Falta de tempo para pensar em surpresas",
+            "Não sabe mais o que fazer para surpreender de forma simples",
+            "Sempre deixando para depois e caindo na mesmice",
+            "Ideias legais são difíceis de encontrar sem gastar muito"
+          ],
+          "icon": "heart"
+        }
+      ]
+    },
+    {
+      "section": "Solução",
+      "background": "bg-secondary/10",
+      "elements": [
+        {
+          "type": "Heading",
+          "content": "A Solução Prática e Criativa Para Fortalecer Seu Relacionamento Todos os Dias",
+          "size": "text-3xl text-center"
+        },
+        {
+          "type": "Checklist",
+          "items": [
+            "✅ Planner Completo de Surpresas Diárias",
+            "✅ 20 Mensagens Românticas prontas para WhatsApp",
+            "✅ 10 Ideias Baratas de Surpresas para Casais",
+            "✅ Checklist + Calendário de Datas Especiais",
+            "✅ Bônus Exclusivo: Como planejar uma “Noite Especial” com baixo custo"
+          ]
+        },
+        {
+          "type": "ImageGallery",
+          "images": ["mockup-interno1.png", "mockup-interno2.png"],
+          "style": "grid grid-cols-2 gap-4"
+        }
+      ]
+    },
+    {
+      "section": "Receba",
+      "background": "bg-neutralWhite",
+      "elements": [
+        {
+          "type": "GridIcons",
+          "items": [
+            { "icon": "calendar", "label": "Planner PDF Completo" },
+            { "icon": "message-circle", "label": "Templates de Mensagens" },
+            { "icon": "gift", "label": "Ideias Surpresas" },
+            { "icon": "check-circle", "label": "Checklist Personalizado" },
+            { "icon": "star", "label": "Bônus Noite Especial" }
+          ]
+        }
+      ]
+    },
+    {
+      "section": "Depoimentos",
+      "background": "bg-neutralLight",
+      "elements": [
+        {
+          "type": "TestimonialCards",
+          "style": "cardShadow",
+          "items": [
+            "Fiz uma das ideias e ele ficou super surpreso 😍",
+            "Comprei achando que seria simples, mas me surpreendi com a qualidade, vale muito mais!",
+            "Já na primeira semana usando, senti diferença no nosso dia a dia!"
+          ]
+        }
+      ]
+    },
+    {
+      "section": "Garantia",
+      "background": "bg-neutralLight",
+      "elements": [
+        {
+          "type": "Heading",
+          "content": "✨ Garantia Incondicional de 7 Dias ✨",
+          "size": "text-2xl text-center"
+        },
+        {
+          "type": "Paragraph",
+          "content": "Se não gostar, devolvemos seu dinheiro. Sem complicações, sem perguntas.",
+          "style": "text-center"
+        },
+        {
+          "type": "Icons",
+          "items": ["shield", "credit-card", "lock"]
+        }
+      ]
+    },
+    {
+      "section": "Oferta",
+      "background": "bg-primary/10",
+      "elements": [
+        {
+          "type": "Heading",
+          "content": "Oferta Especial: Apenas Hoje, De R$39,90 por R$9,90!",
+          "size": "text-3xl text-center"
+        },
+        {
+          "type": "Countdown",
+          "style": "mt-4 mb-4"
+        },
+        {
+          "type": "Button",
+          "content": "QUERO AGORA POR R$9,90",
+          "color": "bg-cta text-white",
+          "style": "py-4 px-8 rounded-2xl shadow-lg",
+          "hover": "buttonHover"
+        }
+      ]
+    },
+    {
+      "section": "FAQ",
+      "background": "bg-white",
+      "elements": [
+        {
+          "type": "Accordion",
+          "items": [
+            { "question": "Quando recebo o produto?", "answer": "Acesso imediato após confirmação." },
+            { "question": "É um produto físico?", "answer": "Não, é 100% digital." },
+            { "question": "Posso acessar pelo celular?", "answer": "Sim, totalmente adaptado para celular." },
+            { "question": "Tem garantia?", "answer": "Sim! 7 dias incondicional." },
+            { "question": "Como faço para pagar?", "answer": "Cartão, PIX ou boleto." }
+          ]
+        }
+      ]
+    }
+  ]
+}

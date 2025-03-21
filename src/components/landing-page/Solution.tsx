@@ -25,7 +25,7 @@ export default function Solution() {
   }, []);
 
   return (
-    <section id="solution" className="bg-gradient-to-b from-[#FFB6C9]/5 to-[#FF6B94]/5 section-padding relative overflow-hidden">
+    <section id="solution" className="bg-[#fef0f4] section-padding relative overflow-hidden">
       {/* Elementos decorativos sutis */}
       <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#FF6B94]/5 blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-[#FFB6C9]/5 blur-3xl"></div>

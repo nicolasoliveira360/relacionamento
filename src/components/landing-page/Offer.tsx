@@ -24,7 +24,7 @@ export default function Offer() {
   }, []);
   
   return (
-    <section id="offer" className="bg-gradient-to-b from-[#FFB6C9]/15 to-[#FF6B94]/10 section-padding relative overflow-hidden">
+    <section id="offer" className="bg-[#fef0f4] section-padding relative overflow-hidden">
       {/* Elementos decorativos com degradê suave */}
       <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-gradient-to-bl from-[#FFB347]/5 to-[#FF6B94]/15 blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-gradient-to-tr from-[#FF6B94]/15 to-[#FFB347]/5 blur-3xl"></div>

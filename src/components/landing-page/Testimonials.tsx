@@ -39,7 +39,7 @@ const Testimonials: React.FC = () => {
   };
 
   return (
-    <section id="testimonials" className="py-12 md:py-20 bg-gradient-to-br from-white to-[#FFB6C9]/10 relative overflow-hidden">
+    <section id="testimonials" className="py-12 md:py-20 bg-[#fef0f4] relative overflow-hidden">
       {/* Elementos decorativos */}
       <div className="absolute top-0 right-0 w-72 h-72 bg-gradient-to-bl from-[#FFB6C9]/20 to-transparent rounded-full translate-x-1/3 -translate-y-1/3 blur-2xl"></div>
       <div className="absolute bottom-0 left-0 w-72 h-72 bg-gradient-to-tr from-[#FFB6C9]/15 to-transparent rounded-full -translate-x-1/3 translate-y-1/3 blur-2xl"></div>

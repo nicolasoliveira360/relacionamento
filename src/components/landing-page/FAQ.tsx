@@ -26,7 +26,7 @@ export default function FAQ() {
   };
 
   return (
-    <section id="faq" className="py-12 md:py-24 relative overflow-hidden bg-gradient-to-b from-white to-[#FFB6C9]/10">
+    <section id="faq" className="py-12 md:py-24 relative overflow-hidden bg-[#fef0f4]">
       {/* Elementos decorativos */}
       <div className="absolute top-0 left-0 w-64 h-64 bg-gradient-to-br from-[#FFB6C9]/20 to-transparent rounded-full -translate-x-1/2 -translate-y-1/2 blur-2xl"></div>
       <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-tr from-[#FFB6C9]/15 to-transparent rounded-full translate-x-1/3 translate-y-1/3 blur-3xl"></div>

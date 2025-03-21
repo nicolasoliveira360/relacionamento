@@ -107,7 +107,7 @@ export default function Problem() {
             Nosso desafio de 30 dias foi criado especificamente para ajudar casais a reconstruírem sua conexão, mesmo com pouco tempo disponível. Com atividades simples e práticas, você poderá transformar seu relacionamento a partir de hoje.
           </p>
           <a 
-            href="#offer" 
+            href="https://pay.hotmart.com/K98802787P" 
             className="inline-block bg-gradient-to-r from-[#FF6B94] to-[#FFB347] text-white text-sm sm:text-base font-bold py-3 sm:py-4 px-5 sm:px-8 rounded-lg shadow-sm hover:shadow-md transform hover:translate-y-[-2px] transition-all duration-300"
           >
             Quero começar a transformação

@@ -130,7 +130,7 @@ export default function Offer() {
             </p>
             
             <a 
-              href="#payment" 
+              href="https://pay.hotmart.com/K98802787P" 
               className="block w-full sm:w-auto sm:inline-block mx-auto bg-gradient-to-r from-[#FF6B94] to-[#FFB347] text-white text-base sm:text-lg font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg shadow-md hover:shadow-lg transform hover:translate-y-[-2px] transition-all duration-300 mb-3 sm:mb-4"
             >
               Quero Transformar Meu Relacionamento Agora

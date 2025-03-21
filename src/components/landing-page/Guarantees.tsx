@@ -83,7 +83,7 @@ export default function Guarantees() {
         {/* Chamada para ação */}
         <div className="text-center">
           <a 
-            href="#offer" 
+            href="https://pay.hotmart.com/K98802787P" 
             className="inline-block bg-gradient-to-r from-[#FF6B94] to-[#FFB347] text-white text-base sm:text-lg font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg shadow-sm hover:shadow-md transform hover:translate-y-[-2px] transition-all duration-300"
           >
             Quero Transformar Meu Relacionamento

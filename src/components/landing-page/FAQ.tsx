@@ -196,7 +196,7 @@ export default function FAQ() {
                 </p>
                 
                 <a 
-                  href="#offer" 
+                  href="https://pay.hotmart.com/K98802787P" 
                   className="inline-block bg-gradient-to-r from-[#FF6B94] to-[#FFB347] text-white text-sm sm:text-base font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-lg shadow-sm hover:shadow-md transform hover:translate-y-[-2px] transition-all duration-300"
                 >
                   Começar o Desafio Agora

@@ -50,12 +50,20 @@ export default function Hero() {
             </div>
             
             {/* Botão com design mais elegante */}
-            <button className="group relative w-full lg:w-auto bg-white text-[#FF6B94] font-bold text-lg px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2">
-              Transformar Meu Relacionamento
-              <div className="absolute -right-3 -top-3 bg-[#FFB347] text-white text-sm px-3 py-1 rounded-md font-medium">
-                R$19,90
-              </div>
-            </button>
+            <div className="flex gap-3 sm:gap-4 mt-6 sm:mt-8">
+              <a 
+                href="https://pay.hotmart.com/K98802787P" 
+                className="inline-block bg-gradient-to-r from-[#FF6B94] to-[#FFB347] text-white text-sm sm:text-base font-bold py-3 sm:py-4 px-5 sm:px-8 rounded-lg shadow-sm hover:shadow-md transform hover:translate-y-[-2px] transition-all duration-300"
+              >
+                Quero Transformar Meu Relacionamento
+              </a>
+              <a 
+                href="#solution" 
+                className="inline-block bg-white text-[#343A40] text-sm sm:text-base font-bold py-3 sm:py-4 px-5 sm:px-8 rounded-lg shadow-sm border border-[#E9ECEF] hover:bg-[#F8F9FA] transition-colors"
+              >
+                Saiba Mais
+              </a>
+            </div>
             
             {/* Garantias com design mais contido */}
             <div className="flex justify-around bg-white/10 backdrop-blur-sm p-4 rounded-lg animate-fade-in animate-delay-400 text-white">

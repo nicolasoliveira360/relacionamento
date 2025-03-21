@@ -1,16 +1,12 @@
 "use client";
 
-import { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import { useEffect } from 'react';
 
 export default function Guarantees() {
-  const [isVisible, setIsVisible] = useState(false);
-  
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true);
           observer.disconnect();
         }
       },

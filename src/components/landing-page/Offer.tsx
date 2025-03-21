@@ -4,12 +4,6 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 export default function Offer() {
-  const [timeLeft, setTimeLeft] = useState({
-    hours: 2,
-    minutes: 59,
-    seconds: 59
-  });
-  
   const [isVisible, setIsVisible] = useState(false);
   
   useEffect(() => {
@@ -27,24 +21,6 @@ export default function Offer() {
     if (section) observer.observe(section);
     
     return () => observer.disconnect();
-  }, []);
-  
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft(prev => {
-        const newSeconds = prev.seconds - 1;
-        const newMinutes = newSeconds < 0 ? prev.minutes - 1 : prev.minutes;
-        const newHours = newMinutes < 0 ? prev.hours - 1 : prev.hours;
-        
-        return {
-          hours: newHours < 0 ? 23 : newHours,
-          minutes: newMinutes < 0 ? 59 : newMinutes,
-          seconds: newSeconds < 0 ? 59 : newSeconds
-        };
-      });
-    }, 1000);
-    
-    return () => clearInterval(timer);
   }, []);
   
   return (

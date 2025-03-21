@@ -1,17 +1,12 @@
 "use client";
 
-import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import Image from 'next/image';
+import { useEffect } from 'react';
 
 export default function Products() {
-  const [isVisible, setIsVisible] = useState(false);
-  
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true);
           observer.disconnect();
         }
       },
@@ -23,35 +18,6 @@ export default function Products() {
     
     return () => observer.disconnect();
   }, []);
-
-  const products = [
-    { 
-      icon: <i className="fa-solid fa-calendar-check text-[#FF6B94]"></i>, 
-      label: "Desafio de 30 Dias", 
-      description: "Atividades diárias para renovar seu relacionamento",
-      image: "https://images.unsplash.com/photo-1506784365847-bbad939e9335?q=80&w=2068&auto=format&fit=crop"
-    },
-    { 
-      icon: <i className="fa-solid fa-clipboard-check text-[#FF6B94]"></i>, 
-      label: "Planner de Acompanhamento", 
-      description: "Registre e acompanhe seu progresso no desafio",
-      image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=2072&auto=format&fit=crop"
-    },
-    { 
-      icon: <i className="fa-solid fa-comment-dots text-[#FF6B94]"></i>, 
-      label: "20 Mensagens Românticas", 
-      description: "Prontas para enviar no WhatsApp",
-      image: "https://images.unsplash.com/photo-1565789673422-b5d716994858?q=80&w=2070&auto=format&fit=crop",
-      isBonus: true
-    },
-    { 
-      icon: <i className="fa-solid fa-gift text-[#FF6B94]"></i>, 
-      label: "10 Ideias de Surpresas Baratas", 
-      description: "Gestos especiais que cabem no seu bolso",
-      image: "https://images.unsplash.com/photo-1513201099705-a9746e1e201f?q=80&w=1974&auto=format&fit=crop",
-      isBonus: true
-    }
-  ];
 
   return (
     <section id="products" className="py-12 md:py-20 bg-gradient-to-b from-white to-[#FFB6C9]/5 relative overflow-hidden">

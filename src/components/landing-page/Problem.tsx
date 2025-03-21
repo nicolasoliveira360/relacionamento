@@ -1,16 +1,12 @@
 "use client";
 
-import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { useEffect } from 'react';
 
 export default function Problem() {
-  const [isVisible, setIsVisible] = useState(false);
-  
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true);
           observer.disconnect();
         }
       },
@@ -22,33 +18,6 @@ export default function Problem() {
     
     return () => observer.disconnect();
   }, []);
-  
-  const problems = [
-    { 
-      icon: "clock",
-      title: "Rotina consumindo a relação",
-      text: "O dia a dia corrido acaba distanciando o casal emocionalmente",
-      description: "As obrigações diárias ocupam tanto espaço que muitos casais mal conseguem ter conversas significativas."
-    },
-    { 
-      icon: "lightbulb",
-      title: "Falta de novas experiências",
-      text: "A repetição das mesmas atividades e conversas torna o relacionamento previsível",
-      description: "Sem novos estímulos, a sensação de conexão e intimidade vai se perdendo com o tempo."
-    },
-    { 
-      icon: "comment",
-      title: "Diálogo superficial",
-      text: "Conversas limitadas a questões práticas do cotidiano",
-      description: "A comunicação se torna mecânica, centrada apenas em resolver problemas ou organizar a rotina."
-    },
-    { 
-      icon: "heart",
-      title: "Demonstrações de afeto escassas",
-      text: "Pequenos gestos de carinho e apreciação vão diminuindo",
-      description: "Com o tempo, as expressões de amor que eram frequentes no início do relacionamento se tornam raras."
-    }
-  ];
 
   return (
     <section id="problem" className="py-12 md:py-20 bg-gradient-to-tr from-white to-[#FFB6C9]/10 relative overflow-hidden">

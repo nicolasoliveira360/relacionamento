@@ -1,18 +1,14 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 
 const Testimonials: React.FC = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
   
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true);
           observer.disconnect();
         }
       },
@@ -27,38 +23,11 @@ const Testimonials: React.FC = () => {
   
   useEffect(() => {
     const interval = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % testimonials.length);
+      setCurrentSlide((prev) => (prev + 1) % 2);
     }, 6000);
     
     return () => clearInterval(interval);
   }, []);
-
-  const testimonials = [
-    {
-      text: "Nossa rotina estava tão mecânica e sem brilho. Foi só começar a usar o planner que consegui despertar um novo olhar no meu marido. Os gestos são tão simples que chegam a ser óbvios, mas fazem toda diferença quando organizados. Ele me perguntou o que havia mudado em mim!",
-      name: "Amanda Silva",
-      location: "Rio de Janeiro",
-      img: "/testimonial1.jpg",
-      date: "Há 12 dias",
-      verified: true
-    },
-    {
-      text: "Preciso confessar que estava cética no início, mas cada pequeno gesto sugerido no planner construiu uma ponte de reconexão entre nós. Meu esposo tem notado e retribuído os gestos, algo que não acontecia há anos. É como se estivéssemos redescobrindo um ao outro com uma nova linguagem de amor.",
-      name: "Carlos e Patrícia Mendes",
-      location: "São Paulo",
-      img: "/testimonial2.jpg",
-      date: "Há 28 dias",
-      verified: true
-    },
-    {
-      text: "Após 7 anos juntos, eu sentia que estávamos apenas existindo no mesmo espaço. O planner me mostrou como pequenos momentos de atenção têm um impacto enorme. Ontem ele chegou com flores - algo que não acontecia há anos! - e disse que era para retribuir os pequenos cuidados que venho tendo.",
-      name: "Fernanda Costa",
-      location: "Belo Horizonte",
-      img: "/testimonial3.jpg",
-      date: "Há 3 dias",
-      verified: true
-    }
-  ];
 
   // Funções para controlar o carousel
   const nextSlide = () => {
@@ -151,7 +120,7 @@ const Testimonials: React.FC = () => {
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
               {/* Slide 1 */}
-              <div className="w-full flex-shrink-0 flex flex-col md:flex-row gap-4 sm:gap-6">
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
                 <div className="bg-white rounded-lg shadow-sm border border-[#E9ECEF] p-4 sm:p-6 flex-1">
                   <div className="flex items-center mb-3 sm:mb-4">
                     <div className="flex text-[#FFB347]">
@@ -165,7 +134,7 @@ const Testimonials: React.FC = () => {
                   </div>
                   
                   <p className="text-gray-600 italic mb-4 sm:mb-6 text-sm sm:text-base">
-                    "Nosso relacionamento estava em piloto automático, mal conversávamos sobre algo além da rotina. O desafio trouxe de volta o brilho nos olhos e a vontade de estarmos juntos. Em apenas 30 dias, parece que estamos namorando novamente!"
+                    &ldquo;Nosso relacionamento estava em piloto automático, mal conversávamos sobre algo além da rotina. O desafio trouxe de volta o brilho nos olhos e a vontade de estarmos juntos. Em apenas 30 dias, parece que estamos namorando novamente!&rdquo;
                   </p>
                   
                   <div className="flex items-center">
@@ -192,7 +161,7 @@ const Testimonials: React.FC = () => {
                   </div>
                   
                   <p className="text-gray-600 italic mb-4 sm:mb-6 text-sm sm:text-base">
-                    "Confesso que fui cética no início, mas os pequenos desafios diários mudaram completamente a dinâmica do nosso casamento. A comunicação melhorou, estamos mais próximos e voltamos a nos admirar. Vale cada minuto investido."
+                    &ldquo;Confesso que fui cética no início, mas os pequenos desafios diários mudaram completamente a dinâmica do nosso casamento. A comunicação melhorou, estamos mais próximos e voltamos a nos admirar. Vale cada minuto investido.&rdquo;
                   </p>
                   
                   <div className="flex items-center">
@@ -208,7 +177,7 @@ const Testimonials: React.FC = () => {
               </div>
               
               {/* Slide 2 */}
-              <div className="w-full flex-shrink-0 flex flex-col md:flex-row gap-4 sm:gap-6">
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
                 <div className="bg-white rounded-lg shadow-sm border border-[#E9ECEF] p-4 sm:p-6 flex-1">
                   <div className="flex items-center mb-3 sm:mb-4">
                     <div className="flex text-[#FFB347]">
@@ -222,7 +191,7 @@ const Testimonials: React.FC = () => {
                   </div>
                   
                   <p className="text-gray-600 italic mb-4 sm:mb-6 text-sm sm:text-base">
-                    "Começamos o desafio em um momento difícil do casamento. Estava quase desistindo. As atividades nos ajudaram a redescobrir o que nos uniu no início. Nossa relação está mais forte do que nunca."
+                    &ldquo;Começamos o desafio em um momento difícil do casamento. Estava quase desistindo. As atividades nos ajudaram a redescobrir o que nos uniu no início. Nossa relação está mais forte do que nunca.&rdquo;
                   </p>
                   
                   <div className="flex items-center">
@@ -249,7 +218,7 @@ const Testimonials: React.FC = () => {
                   </div>
                   
                   <p className="text-gray-600 italic mb-4 sm:mb-6 text-sm sm:text-base">
-                    "Os desafios são simples mas profundos. Aprendemos a valorizar os pequenos momentos e a nos comunicar melhor. Foi surpreendente como pequenas atitudes consistentes podem transformar um relacionamento."
+                    &ldquo;Os desafios são simples mas profundos. Aprendemos a valorizar os pequenos momentos e a nos comunicar melhor. Foi surpreendente como pequenas atitudes consistentes podem transformar um relacionamento.&rdquo;
                   </p>
                   
                   <div className="flex items-center">

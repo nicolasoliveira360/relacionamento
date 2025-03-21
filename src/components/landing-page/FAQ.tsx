@@ -1,54 +1,14 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import Image from 'next/image';
-
-type FAQItemProps = {
-  question: string;
-  answer: string;
-  isOpen: boolean;
-  onClick: () => void;
-  delay: number;
-};
-
-function FAQItem({ question, answer, isOpen, onClick, delay }: FAQItemProps) {
-  return (
-    <motion.div 
-      className="border-b border-[#E9ECEF] py-5"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: delay * 0.1, duration: 0.5 }}
-    >
-      <button 
-        className="flex justify-between items-center w-full text-left font-semibold text-lg text-[#343A40] hover:text-[#FF6B94] transition-colors group"
-        onClick={onClick}
-      >
-        <span className="group-hover:translate-x-1 transition-transform duration-300">{question}</span>
-        <span className={`ml-6 flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${isOpen ? 'bg-[#FF6B94] text-white' : 'bg-[#FFB6C9]/10 text-[#FF6B94]'}`}>
-          {isOpen ? <i className="fa-solid fa-minus text-sm"></i> : <i className="fa-solid fa-plus text-sm"></i>}
-        </span>
-      </button>
-      <div 
-        className={`mt-4 overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
-      >
-        <div className="text-gray-600 font-medium bg-[#FFB6C9]/5 p-5 rounded-lg border-l-4 border-[#FF6B94]/30">
-          {answer}
-        </div>
-      </div>
-    </motion.div>
-  );
-}
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
-  const [isVisible, setIsVisible] = useState(false);
   
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true);
           observer.disconnect();
         }
       },
@@ -64,29 +24,6 @@ export default function FAQ() {
   const toggleAccordion = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
-
-  const faqs = [
-    {
-      question: "Como funciona o desafio de 30 dias?",
-      answer: "O desafio consiste em 30 atividades específicas, uma para cada dia, que ajudam a construir hábitos saudáveis no seu relacionamento. Você receberá um guia completo com todas as atividades detalhadas e um planner para acompanhar seu progresso diariamente."
-    },
-    {
-      question: "Quanto tempo preciso dedicar por dia?",
-      answer: "A maioria das atividades foi desenvolvida para serem realizadas em aproximadamente 15-30 minutos por dia. Pensamos em pessoas com rotinas ocupadas, então são atividades práticas que podem ser facilmente incorporadas no seu dia a dia."
-    },
-    {
-      question: "Posso fazer o desafio sozinho(a) ou preciso que meu parceiro(a) participe?",
-      answer: "Embora os resultados sejam mais efetivos quando ambos participam, o desafio foi estruturado para que você possa implementá-lo mesmo se inicialmente apenas você estiver engajado. Muitas vezes, as mudanças positivas que você implementa acabam inspirando seu parceiro(a) a se envolver também."
-    },
-    {
-      question: "Como recebo o material após a compra?",
-      answer: "Imediatamente após a confirmação do pagamento, você receberá um e-mail com os links para download de todos os materiais em formato PDF. Você pode acessar e baixar em qualquer dispositivo com acesso à internet."
-    },
-    {
-      question: "Se eu não gostar do material, posso pedir reembolso?",
-      answer: "Sim! Oferecemos garantia de satisfação de 7 dias. Se você não estiver satisfeito com o material por qualquer motivo, basta enviar um e-mail para nosso suporte solicitando o reembolso integral."
-    }
-  ];
 
   return (
     <section id="faq" className="py-12 md:py-24 relative overflow-hidden bg-gradient-to-b from-white to-[#FFB6C9]/10">
